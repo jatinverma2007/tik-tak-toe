@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #24edf7fa, #af5cf7);
+    color: #fff;
+}
+
+#turn {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 20px 0;
+    font-weight: 800;
+    color: #fed0b3cf;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-style:italic;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    margin: 20px auto;
+    background: rgb(101, 99, 245);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.container:hover{
+    background-color:rgb(4, 0, 255);
+    transition: all 29s ease, transform 0.2s ease;
+}
+.container div {
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgba(26, 25, 25, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+    background: rgba(255, 167, 167, 0.065);
+    color: #fff;
+    transition: all 0.3s ease, transform 0.2s ease;
+    border-radius: 10px;
+}
+
+.container div:hover {
+    background: #f39797f3;
+    transform: scale(1.05);
+}
+
+.container div:active {
+    transform: scale(0.95);
+}
+
+#winner {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 20px;
+    color: #95f034e3;
+    font-weight: 800;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.winning-cell {
+    animation: pop 0.5s ease;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+#reset {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background: #eb3b3b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#reset:hover {
+    background: #ff1a1a;
+    transform: scale(1.05);
+}
+
+#reset:active {
+    transform: scale(0.95);
+}
